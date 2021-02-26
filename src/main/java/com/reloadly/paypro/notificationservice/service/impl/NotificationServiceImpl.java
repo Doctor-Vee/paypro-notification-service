@@ -26,7 +26,9 @@ public class NotificationServiceImpl implements NotificationService {
                 .queryString("from", "Doctor Vee from PayPro <doctorvee@paypro.com>")
                 .queryString("to", emailAddress)
                 .queryString("subject", subject != null ? subject : "Notification from PayPro")
-                .queryString("text", message)
+                .queryString("html", "<p style='font-family:arial; font-size:1.5em; color:blue;text-align:center;'>"
+                        + message +
+                        "</h3> <footer style='background-color:skyblue; text-align:center'>✔ PayPro</footer>")
                 .asJson();
         log.info(String.valueOf(response.getBody()));
         String responseString = "";
