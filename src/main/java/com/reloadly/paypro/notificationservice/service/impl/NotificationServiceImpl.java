@@ -37,7 +37,6 @@ public class NotificationServiceImpl implements NotificationService {
         } else {
             responseString = "An error occurred 👎";
         }
-        ;
         return responseString;
     }
 }
